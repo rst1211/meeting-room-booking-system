@@ -1,0 +1,16 @@
+
+h3 {text-align: center;}
+  textarea {
+      width: calc(100% - 500px);
+      }
+       textarea:hover {
+      outline: none;
+      border: 1px solid #1c87c9;
+      }
+      textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+

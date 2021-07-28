@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Change Password</title>
+    <meta charset="utf-8">
+   	
+    <!--bootstrap css  -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<!-- main css -->
+	<link type="text/css" rel="stylesheet" href="css/style_pass.css" />
+	<!-- icons -->
+	<link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- js file -->
+	<script type="text/javascript" src="js/pass.js"></script>
+	</head>
+
+
+	<body>
+		<div class="col-sm-12">
+			<h1 align="center">Change Password</h1>
+			
+		</div>
+		<div class="row">
+					<div id="sidebar">
+  						<div class="toggle-btn" onclick="toggleSidebar(this)">
+    						<span></span>
+    						<span></span>
+    						<span></span>
+  						</div>  
+  					<div class="list">
+    				<div class="item">
+    					<a href="index.html">Home</a>
+    				</div>
+    				<div class="item">
+    					<a href="#">Status</a>
+    				</div>
+    				<div class="item">
+    					<a href="index.html">Log Out</a>
+    				</div>
+  					</div>
+					</div>
+		
+		</div>
+		<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+			<p class="text-center">Use the form below to change your password. Your password cannot be the same as your username.</p>
+		<form method="post" id="passwordForm">
+		<input type="password" class="input-lg form-control" name="password1" id="password1" placeholder="New Password" autocomplete="off">
+		<div class="row">
+		<div class="col-sm-6">
+			<span id="8char" class="zmdi zmdi-close" style="color:#FF0004;"></span> 8 Characters Long<br>
+			<span id="ucase" class="zmdi zmdi-close" style="color:#FF0004;"></span> One Uppercase Letter
+		</div>
+		<div class="col-sm-6">
+			<span id="lcase" class=" zmdi zmdi-close" style="color:#FF0004;"></span> One Lowercase Letter<br>
+			<span id="num" class="zmdi zmdi-close" style="color:#FF0004;"></span> One Number
+		</div>
+		</div>
+			<input type="password" class="input-lg form-control" name="password2" id="password2" placeholder="Repeat Password" autocomplete="off">
+		<div class="row">
+		<div class="col-sm-12">
+			<span id="pwmatch" class="zmdi zmdi-close " style="color:#FF0004;"></span> Passwords Match
+		</div>
+		</div>
+		<input type="submit" class="col-xs-12 btn btn-primary btn-load btn-lg" data-loading-text="Changing Password..." value="Change Password">
+	</form>
+	</div><!--/col-sm-6-->
+	</div><!--/row-->
+	
+	</body>
+</html>
+

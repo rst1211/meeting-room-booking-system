@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+	<title>Booking Page</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style_event.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/event.js"></script>
+
+</head>
+
+<body>
+	<div id="booking" class="section">
+		<div class="section-center">
+				<div class="row">
+					<div id="sidebar">
+  						<div class="toggle-btn" onclick="toggleSidebar(this)">
+    						<span></span>
+    						<span></span>
+    						<span></span>
+  						</div>  
+  					<div class="list">
+  					<div class="item">
+    					<a href="login.php">Home</a>
+    				</div>
+    				<div class="item">
+    					<a href="status.php">Application Status</a>
+    				</div>
+    				<div class="item">
+    					<a href="changepass.html">Change Password</a>
+    				</div>
+    				<div class="item">
+    					<a href="login.php">Log Out</a>
+    				</div>
+  					</div>
+				</div>
+					<div class="booking-form">
+						<div class="form-header">
+							<h2>Book Your Meetings</h2>
+						</div>
+
+						<form action="connect.php" method="post">
+							<div class="form-group">
+								<span class="form-label">Meeting Room</span>
+										<select name="room" class="form-control">
+											<option value="Computer seminar hall">Computer seminar hall</option>
+											<option  value="IT seminar hall">IT seminar hall</option>
+											<option  value="ENTC seminar hall">ENTC seminar hall</option>
+											<option  value="Labs">Labs</option>
+										</select>
+										<span class="select-arrow"></span>
+							</div>
+									<div class="form-group">
+										<span class="form-label">Date</span>
+										<input class="form-control" type="date" id="datecontrol" name="date_1"required>
+									</div>
+									                         
+								<div class="row">
+								<div class="col-md-5">
+									<div class="form-group">
+										<span class="form-label">From</span>
+										<input class="form-control" type="time" id="from" name="from"required>
+									</div>
+									
+								</div>
+								<div class="col-md-5">
+									<div class="form-group">
+										<span class="form-label">To</span>
+										<input class="form-control" type="time" id="to" name="to"onchange="checkTime()"required>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<span class="form-label">Description</span>
+								<textarea class="form-control" rows="30" cols="100" name="description"required>Enter details about the event.</textarea>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+								<div class="form-group">
+									<span class="form-label">Upload File</span>
+									<input class="form-control" type="file" d="my file" name="file"onchange="validatePDF(this)" required>
+								</div>
+								</div>
+							</div>	              
+							<div class="form-btn">
+								<button class="submit-btn">Book Now</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
